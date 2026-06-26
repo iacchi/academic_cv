@@ -1,0 +1,352 @@
+% -------------------------------------------------
+% Academic CV template information
+%
+% Author: Iacopo Benesperi
+% Project page: https://github.com/iacchi/academic_cv
+%
+% WARNING:
+% If you are using this template within Overleaf,
+% at the moment this document needs to be compiled
+% with either xelatex or lualatex, because the TU
+% format for fonts is required by the package
+% academicons. The package author says usage with
+% pdflatex (T1 fonts) has been fixed already (in
+% version 1.9.6), but Overleaf is still running
+% version 1.9.1 of the package in their system.
+%
+% The layout of Academic CV is inspired by My CV,
+% work of Pietro Di Leo. The code however is
+% almost completely different, offering a more
+% streamlined and easier information filling
+% compared to the original.
+% -------------------------------------------------
+
+% The option SidebarWidth handles the definition
+% of the first page sidebar's width, so that it can
+% be easily changed to adapt to longer text or a
+% different page format. The option has a default
+% value of 8.6cm so, unless you want to change the
+% default width, you can safely remove the option
+% from the declaration. All other declared options
+% will be passed directly to the "article" class. 
+\documentclass[a4paper,11pt,SidebarWidth=8.6cm]{academic_cv}
+
+% -------------------------------------------------
+% Add here extra packages that you may need.
+% The academic_cv class already loads the following:
+% geometry, libertine, libertinust1math, fontenc,
+% fontawesome7, academicons, twemojis, hyperref,
+% xcolor, nopageno, graphicx, enumitem, calc, flowfram,
+% array, tikz, titlesec, refcount, tabularx.
+% -------------------------------------------------
+
+
+
+% -------------------------------------------------
+% Set colours for header and sidebar in hex code
+% -------------------------------------------------
+
+\definecolor{HeaderColor}{HTML}{404040}
+\definecolor{HeaderTextColor}{HTML}{FFFFFF}
+\definecolor{SidebarColor}{HTML}{E6E6E6}
+
+% -------------------------------------------------
+% Header information
+% -------------------------------------------------
+
+\Name{John}
+\Surname{Doe}
+\JobDescription{\LaTeX{} coder extraordinaire}
+\RightText{Curriculum Vitae}
+
+% -------------------------------------------------
+% Sidebar information
+% -------------------------------------------------
+
+% Profile picture, leave empty if you don't want one
+\Picture{profile-picture}
+
+% \ContactLangSpacing: Adjust spacing (in mm)
+% for the elements of the Contacts, Languages,
+% \ConferenceSpacing: Adjust spacing (in pt)
+% for the elements of the Conference attendance.
+% section.
+\ContactLangSpacing{1.2mm}
+\ConferenceSpacing{1.2}
+
+\ContactTitle{Contacts}
+\ContactDetails{
+  % The syntax is: icon in first parenthesis,
+  % details in the second parenthesis. Icons
+  % using fontawesome or academicons.
+  % Date of birth
+  \contactlangentry{\faPerson}{Date of birth: XX/XX/XXXX}
+  % Primary email
+  \contactlangentry{\faEnvelope}{email@address.org}
+  % Secondary email
+  \contactlangentry{\faEnvelope[regular]}{email@address.it}
+  % Phone number
+  \contactlangentry{\faPhone}{+XX X XXX XXX XXX}
+  % Address
+  \contactlangentry{\faLocationDot}{XXX Name Street, City, Post code, Country}
+  % ORCID profile
+  \contactlangentry{\aiOrcid}{\href{https://orcid.org/0000-0000-0000-0000}{ORCID: 0000-0000-0000-0000}}
+  % ResearcherID profile
+  \contactlangentry{\aiResearcherID}{\href{https://www.webofscience.com/wos/author/record/P-0000-0000}{ResearcherID: P-0000-0000}}
+  % Scopus profile
+  \contactlangentry{\aiScopus}{\href{https://www.scopus.com/authid/detail.uri?authorId=00000000000}{Scopus: 00000000000}}
+}
+
+\LanguagesTitle{Languages}
+\LanguagesDetails{
+  % The syntax is: icon in first parenthesis,
+  % details in the second parenthesis. Icons
+  % using twemojis. The \Large command makes
+  % the icons big enough.
+  \contactlangentry{{\Large\texttwemoji{it}}}{Language1 - Native language}
+  \contactlangentry{{\Large\texttwemoji{uk}}}{Language2 - Professional knowledge (C2)}
+  \contactlangentry{{\Large\texttwemoji{fr}}}{Language3 - Basic knowledge (A1)}
+}
+
+\ProfSkillsTitle{Professional skills}
+\ProfSkillsDetails{
+  \skilltag{Skill1}
+  \skilltag{Skill2}
+  \skilltag{Skill3}
+  \skilltag{Skill4}
+  \skilltag{Skill5}
+  \skilltag{Skill6}
+  \skilltag{Skill7}
+  \skilltag{Skill8}
+}
+
+\SoftSkillsTitle{Soft skills and strengths}
+\SoftSkillsDetails{
+  \skilltag{Skill1}
+  \skilltag{Skill2}
+  \skilltag{Skill3}
+  \skilltag{Skill4}
+  \skilltag{Skill5}
+  \skilltag{Skill6}
+  \skilltag{Skill7}
+  \skilltag{Skill8}
+}
+
+\DigitalSkillsTitle{Digital competence}
+\DigitalSkillsDetails{
+  \skilltag{Skill1}
+  \skilltag{Skill2}
+  \skilltag{Skill3}
+  \skilltag{Skill4}
+  \skilltag{Skill5}
+  \skilltag{Skill6}
+  \skilltag{Skill7}
+  \skilltag{Skill8}
+}
+
+\OtherInterestsTitle{Other interests}
+\OtherInterestsDetails{
+  \myinterest{\faMusic{} Music}
+  \myinterest{\faDribbble{} Sport}
+  \myinterest{\faBook{} Reading}
+  \myinterest{\faTrain{} Travels}
+  \myinterest{\faCamera{} Photography}
+}
+
+\ReferencesTitle{References}
+\ReferencesDetails{
+  % The syntax is: icon in first parenthesis,
+  % details in the second parenthesis. Icons
+  % using fontawesome.
+  \contactlangentry{\faPerson}{Prof. John Doe -- Venus University \\ john.doe@venus.uni}
+  \contactlangentry{\faPersonDress}{Prof. Jane Doe -- University of Mars \\ jane.doe@mars.edu}
+}
+
+% -------------------------------------------------
+% Main document
+% -------------------------------------------------
+
+\begin{document}
+
+\section*{\faGraduationCap{}~~~EDUCATION}
+
+\EduWorkEntry
+  {X/XX/XXXX – X/XX/XXXX}
+  {PhD in Something}
+  {Somewhere, Venus}
+  {Venus University}
+  {\textit{Thesis title:} Something \\
+  \textit{Thesis supervisors:} Prof. John Doe, Prof. Mario Doe \\
+  Some explanation.}
+
+\EduWorkEntry
+  {X/XX/XXXX – X/XX/XXXX}
+  {Master's degree in \\Something long}
+  {Somewhere, Mars}
+  {University of Mars}
+  {\textit{Thesis title:} Something \\
+  \textit{Thesis supervisors:} Prof. Jane Doe \\
+  Some explanation.\\
+  \textbf{Degree mark: XX/XX}}
+
+\EduWorkEntry
+  {X/XX/XXXX – X/XX/XXXX}
+  {Bachelor's degree in \\Something else}
+  {Somewhere, Earth}
+  {University of Earth}
+  {\textit{Thesis title:} Something \\
+  \textit{Thesis supervisors:} Prof. Mario Kart \\
+  Some explanation.\\
+  \textbf{Degree mark: XX/XX}}
+
+\section*{\faBriefcase{}~~~WORK EXPERIENCE}
+
+\EduWorkEntry
+  {XX/XXXX – current}
+  {Current title}
+  {Somewhere, Earth}
+  {University of Earth}
+  {Some description.}
+
+\EduWorkEntry
+  {XX/XXXX – XX/XXXX}
+  {Previous title}
+  {Somewhere, Moon}
+  {Moon University}
+  {Some description.}
+
+\EduWorkEntry
+  {XX/XXXX – XX/XXXX}
+  {Previous title}
+  {Somewhere, Moon}
+  {Moon University}
+  {Some description.}
+
+\EduWorkEntry
+  {XX/XXXX – XX/XXXX}
+  {Previous title}
+  {Somewhere, Moon}
+  {Moon University}
+  {Some description.}
+
+\EduWorkEntry
+  {XX/XXXX – XX/XXXX}
+  {Previous title}
+  {Somewhere, Moon}
+  {Moon University}
+  {Some description.}
+
+\EduWorkEntry
+  {XX/XXXX – XX/XXXX}
+  {Previous title}
+  {Somewhere, Moon}
+  {Moon University}
+  {Some description.}
+
+\EduWorkEntry
+  {XX/XXXX – XX/XXXX}
+  {Previous title}
+  {Somewhere, Moon}
+  {Moon University}
+  {Some description.}
+
+\EduWorkEntry
+  {XX/XXXX – XX/XXXX}
+  {Previous title}
+  {Somewhere, Moon}
+  {Moon University}
+  {Some description.}
+
+\EduWorkEntry
+  {XX/XXXX – XX/XXXX}
+  {Previous title}
+  {Somewhere, Moon}
+  {Moon University}
+  {Some description.}
+
+% A \newpage is required to separate the
+% last \EduWorkEntry of the first page and
+% the first \EduWorkEntry of the second
+% page. This is to avoid weird margins.
+% It is also the only time you have to
+% declare a \newpage.
+\newpage
+
+\EduWorkEntry
+  {XX/XXXX – XX/XXXX}
+  {Previous title}
+  {Somewhere, Moon}
+  {Moon University}
+  {Some description.}
+
+\section*{\faBuildingColumns{}~~~TEACHING EXPERIENCE}
+
+\EduWorkEntry
+  {XX/XXXX - XX/XXXX}
+  {Teacher}
+  {Somewhere, Earth}
+  {University of Earth}
+  {I taught something.}
+
+\section*{\faTrophy{}~~~FUNDING AND AWARDS}
+
+\begin{itemize}[leftmargin=*,itemsep=0pt,parsep=0pt]
+  \item{I got some big money.} 
+  \item{I got some medium money.} 
+  \item{I got some small money.}
+\end{itemize}
+
+\section*{\faBookOpen{}~~~PUBLICATIONS}
+
+Scientific parameters: h-index: XX; total citations: XXXX. (source: Web of Science/Scopus)
+\begin{enumerate}[leftmargin=*,itemsep=0pt,parsep=0pt,topsep=0pt]
+  \item \publication{2025}{\textbf{J. Doe}, M. Kart, et al.}{Some title}{Journal of nothing}{10}{600-700}{10.1000/j.not.314864}{JIF: 18.9. Citations: XX}
+\end{enumerate}
+
+\section*{\faPeopleGroup{}~~~CONFERENCE ATTENDANCE}
+
+% This text goes into a tabularx environment. The
+% syntax is: type of contribution (Poster, Talk,
+% Attendance, Invited, Keynote) in first column,
+% details in the second column.
+\Conferences{
+  \textbf{Keynote} & \textbf{J. Doe}, M. Kart, et al. ``Some fantastic title'', XXX Conference 2026, Somewhere, Earth, XX/XXXX.\\
+  \textbf{Invited} & \textbf{J. Doe}, M. Kart, et al. ``Another great title'', Moon conference 2025, Somewhere, Moon, XX/XXXX.\\
+  \textbf{Talk} & \textbf{J. Doe}, M. Kart, et al. ``My first conference talk'', 2024 Mars Meeting, Somewhere, Mars, XX/XXXX.\\
+  \textbf{Poster} & \textbf{J. Doe}, M. Kart, et al. ``A decent title'', MercuryCon 2023, Somewhere, Mercury, XX/XXXX.\\
+  \textbf{Attendance} & Pluto Conference 2023, Very far, Pluto, XX/XXXX.
+}
+
+\section*{\faCertificate{}~~~SCIENTIFIC LEADERSHIP}
+
+\subsection*{Organisation of international conferences}
+
+\begin{itemize}[leftmargin=*,itemsep=0pt,parsep=0pt,topsep=0pt]
+  \item{I organised a conference!}
+\end{itemize}
+
+\subsection*{Supervision and mentoring activities}
+
+\begin{itemize}[leftmargin=*,itemsep=0pt,parsep=0pt,topsep=0pt]
+  \item{I supervised someone!}
+\end{itemize}
+
+\subsection*{Outreach}
+
+\begin{itemize}[leftmargin=*,itemsep=0pt,parsep=0pt,topsep=0pt]
+  \item{\textbf{Event title} XXXX \\ I was part of the organising team of Event title.}
+\end{itemize}
+
+\subsection*{Academic peer review}
+
+\begin{itemize}[leftmargin=*,itemsep=0pt,parsep=0pt,topsep=0pt]
+  \item{I reviewed manuscripts for the Journal of nothing.}
+\end{itemize}
+
+\subsection*{Other activities}
+
+\begin{itemize}[leftmargin=*,itemsep=0pt,parsep=0pt,topsep=0pt]
+  \item{I did something else as well.}
+\end{itemize}
+
+\end{document}
